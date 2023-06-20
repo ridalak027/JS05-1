@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body id="body">
     <div class="container">
-  
-        <h2>STOP WATCH</h2>
-  
-        <p><span id="hours">00</span><span>:</span> <span id="minutes">00</span><span>:</span> <span id="seconds">00</span></p>
+      <h2>STOP WATCH</h2>
 
-        <button id="button-start">Start</button>
-        <button id="button-stop">Stop</button>
-        <button id="button-reset">Reset</button>
-    </div>  
-
-
+      <p>
+        <span id="hours">00</span><span>:</span> <span id="minutes">00</span
+        ><span>:</span> <span id="seconds">00</span>
+      </p>
+      <div class="bottoms">
+        <button id="button-start">
+          <img src="image/start.png" alt="" />
+          <p>Start</p>
+        </button>
+        <button id="button-stop">
+          <img src="image/stop.png" alt="" />
+          <p>Stop</p>
+        </button>
+        <button id="button-reset">
+          <img src="image/reset.png" alt="" />
+          <p>Reset</p>
+        </button>
+      </div>
+    </div>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

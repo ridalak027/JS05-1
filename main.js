@@ -1,7 +1,6 @@
-
-var seconds = 00;
-var minutes = 00;
-var hours = 00;
+var seconds = "00";
+var minutes = "00";
+var hours = "00";
 var milliseconds = 00;
 
 var v_seconds = document.getElementById("seconds");
@@ -16,33 +15,32 @@ var interval;
 // this function will run when click on start
 
 function startTimer() {
-    milliseconds += 10;
-  if(milliseconds == 1000) {
-        milliseconds = 0;
-        seconds++;
-        v_seconds.innerHTML=(seconds <= 9)? "0" + seconds : seconds;
+  milliseconds += 10;
+  if (milliseconds == 1000) {
+    milliseconds = 0;
+    seconds++;
+    v_seconds.innerHTML = seconds <= 9 ? "0" + seconds : seconds;
 
-  if (seconds > 60) {
+    if (seconds > 60) {
+      minutes++;
+      v_minutes.innerHTML = minutes <= 9 ? "0" + minutes : minutes;
 
-    minutes++;
-    v_minutes.innerHTML=(minutes <= 9)? "0" + minutes : minutes;
+      seconds = 0;
+      v_seconds.innerHTML = "0" + 0;
 
-    seconds = 0;
-    v_seconds.innerHTML = "0" + 0;
-
-    if(minutes == 60) {
-
+      if (minutes == 60) {
         minutes = 0;
         v_minutes.innerHTML = "0" + 0;
 
         hours++;
-        v_hours.innerHTML=(hours < 9)? "0" + hours : hours;
-    } 
+        v_hours.innerHTML = hours < 9 ? "0" + hours : hours;
+      }
+    }
   }
-}
 }
 
 buttonStart.onclick = function () {
+  document.getElementById("body").style.background = "#73c8a9";
   if (interval) {
     clearInterval(interval);
   }
@@ -50,10 +48,12 @@ buttonStart.onclick = function () {
 };
 
 buttonStop.onclick = function () {
+  document.getElementById("body").style.background = "#373b44";
   clearInterval(interval);
 };
 
 buttonReset.onclick = function () {
+  document.getElementById("body").style.background = "#4c6d68";
   clearInterval(interval);
   seconds = "00";
   minutes = "00";
